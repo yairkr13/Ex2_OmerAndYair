@@ -68,23 +68,23 @@
 //
 ////------------------- Function declarations ----------------------------
 //
-//// Gets the welcome message
-//std::string getWelcomeMessage();
-//
-//// Gets the goodbye message
-//std::string getGoodbyeMessage();
-//
-//// Gets the error message
-//std::string getErrorMessage();
-//
-//// Utility function for clearing the terminal screen
-//void clearScreen();
-//
+// Gets the welcome message
+std::string getWelcomeMessage();
+
+// Gets the goodbye message
+std::string getGoodbyeMessage();
+
+// Gets the error message
+std::string getErrorMessage();
+
+// Utility function for clearing the terminal screen
+void clearScreen();
+
 //// Utility function for getting current year from computer clock
 //Date currentDate();
 //
-//// Utility function for getting current year from computer clock
-//int currentYear();
+// Utility function for getting current year from computer clock
+int currentYear();
 
 //------------------- consts --------------------------
 
@@ -95,7 +95,6 @@ constexpr int MAX_AGE = 67;
 
 int main()
 {
-
 	//// Creating the form fields
 	//auto nameField = std::make_unique<Field<std::string>>("What is your name?");
 	//auto idField = std::make_unique<Field<uint32_t>>("What is your ID?");
@@ -154,9 +153,9 @@ int main()
 	//myForm.addValidator(incomesAndOtherIncomesValidator.get());
 	//myForm.addValidator(otherIncomesAndTaxCreditsValidator.get());
 
-	//// Getting the information from the user
-	//clearScreen();
-	//std::cout << getWelcomeMessage();
+	// Getting the information from the user
+	clearScreen();
+	std::cout << getWelcomeMessage();
 
 	//// Get the input only for empty or not valid fields
 	//myForm.fillForm();
@@ -172,50 +171,50 @@ int main()
 	//	myForm.fillForm();
 	//}
 
-	//clearScreen();
-	//std::cout << getGoodbyeMessage();
+	clearScreen();
+	std::cout << getGoodbyeMessage();
 	//std::cout << myForm << '\n';
 	return 0;
 }
-//
-//std::string getWelcomeMessage()
-//{
-//	return "+----------------------------------------------------------+\n"
-//		"|                  Hello and welcome!                      |\n"
-//		"|			Please fill the following 101 form			    |\n"
-//		"+----------------------------------------------------------+\n";
-//}
-//
-//std::string getErrorMessage()
-//{
-//	return "+----------------------------------------------------------+\n"
-//		"|     There was an error in at least one of the fields!    |\n"
-//		"|                Please correct the error(s)               |\n"
-//		"+----------------------------------------------------------+\n";
-//}
-//
-//std::string getGoodbyeMessage()
-//{
-//	return "+----------------------------------------------------------+\n"
-//		"|                      Thank you!                          |\n"
-//		"|               This is the data you sent:                 |\n"
-//		"+----------------------------------------------------------+\n";
-//}
-//
-//void clearScreen()
-//{
-//	system("cls");
-//}
-//
+
+std::string getWelcomeMessage()
+{
+	return "+----------------------------------------------------------+\n"
+		"|                  Hello and welcome!                      |\n"
+		"|			Please fill the following 101 form			    |\n"
+		"+----------------------------------------------------------+\n";
+}
+
+std::string getErrorMessage()
+{
+	return "+----------------------------------------------------------+\n"
+		"|     There was an error in at least one of the fields!    |\n"
+		"|                Please correct the error(s)               |\n"
+		"+----------------------------------------------------------+\n";
+}
+
+std::string getGoodbyeMessage()
+{
+	return "+----------------------------------------------------------+\n"
+		"|                      Thank you!                          |\n"
+		"|               This is the data you sent:                 |\n"
+		"+----------------------------------------------------------+\n";
+}
+
+void clearScreen()
+{
+	system("cls");
+}
+
 //Date currentDate()
 //{
 //	namespace ch = std::chrono;
 //	auto ymd = ch::year_month_day(ch::floor<ch::days>(ch::system_clock::now()));
 //	return Date(static_cast<unsigned>(static_cast<int>(ymd.year())), static_cast<unsigned>(ymd.month()), static_cast<unsigned>(ymd.day()));
 //}
-//int currentYear()
-//{
-//	namespace ch = std::chrono;
-//	auto ymd = ch::year_month_day(ch::floor<ch::days>(ch::system_clock::now()));
-//	return static_cast<int>(ymd.year());
-//}
+int currentYear()
+{
+	namespace ch = std::chrono;
+	auto ymd = ch::year_month_day(ch::floor<ch::days>(ch::system_clock::now()));
+	return static_cast<int>(ymd.year());
+}
