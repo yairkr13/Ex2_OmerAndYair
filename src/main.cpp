@@ -6,7 +6,6 @@
 #include <chrono>  // for currentYear() implementation
 
 //------------------- User includes ----------------------------
-//Checkkkk1
 //// A class that represents a form.
 //// As you will see below: many fields and many validators can be added to the form
 //#include "Form.h"
@@ -220,7 +219,3 @@ int main()
 //	auto ymd = ch::year_month_day(ch::floor<ch::days>(ch::system_clock::now()));
 //	return static_cast<int>(ymd.year());
 //}
-//
-// omer shimoni
-// yair
-//omer hi
